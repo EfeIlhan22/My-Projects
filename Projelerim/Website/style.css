@@ -1,0 +1,48 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+p{
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 0.5em;
+}
+body{
+    background-image: url(oç.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+.dropdown{
+    display: inline-block;
+}
+.dropdown button{
+    background-color: rgb(220, 220, 220);
+    color: rgb(16, 16, 16);
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 3px 3px;
+}
+.dropdown .hoca{
+    display: none;
+    background-color:whitesmoke;
+    position: absolute;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 68%);
+}
+.dropdown:hover .hoca{
+    display:block;
+}
+.dropdown:hover button{
+    background-color: antiquewhite;
+}
+.dropdown a:hover{
+    background-color: aquamarine;
+}
