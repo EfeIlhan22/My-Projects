@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>
-            Behçete götten
-        </title>
-    </head> 
-    <body>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Behçete götten</title>
+</head>
+<body>
+<h1>Bu orospu evlatlarına götten girdiğimiz bir sitedir</h1>
+<div class="dropdown">
+    <button> Orospu evladını seçin </button>
+    <div class="hoca">
+        <a href="#" onclick="getHocas()">Behçet</a>
+        <a href="#" onclick="getHocas()">Ahmet</a>
+        <a href="#" onclick="getHocas()">Omar</a>
+    </div>
+</div>
+<h2>Götten girdiğimin türküsü</h2>
+<a href="https://www.youtube.com/watch?v=TbZ8y3Nkp9Q" target="_blank">Link</a>
 
-        <h1>Bu orospu evlatlarına götten girdiğimiz bir sitedir</h1>
-        <div class="dropdown">
-            <button> Orospu evladını seçin </button>
-            <div class="hoca">
-                <a href="">Behçet</a>
-                <a href="">Ahmet</a>
-                <a href="">Omar</a>
-            </div>
-        </div>
-        <h2>Götten girdiğimin türküsü</h2>
-        <a href="https://www.youtube.com/watch?v=TbZ8y3Nkp9Q"
-         target="_blank">
-            Link   
-        </a>
+<h3>Behçet Hocaya Götten giriş formu</h3>
+<form id="girdisForm">
+    <label for="ad">Ad: </label>
+    <input type="text" id="ad" name="ad" minlength="3" required>
 
-        <h3>Behçet Hocaya Götten giriş formu</h3>
-        <form action="NULL">
-            <label for="Ad">Ad: </label>
-            <input type="text" id="Kullanıcı" minlength="3">
+    <label for="sebebi">Sebebi:</label>
+    <input type="text" id="sebebi" name="sebebi" maxlength="31" required>
 
-            <label for="Götten girme sebebi">Sebebi:</label>
-            <input type="text" id="sebebi" maxlength="31" required>
-            
-            <label for="zaman">Ne zamandan beri götten girmek istiyorsunuz:</label>
-            <input type="text" id="zaman" required>
-            
-            <label for="comment">Görmesini istediğinz bir şey yazın:</label>
-            <textarea id="comment" rows="3" cols="22"></textarea>
-            <input type="submit">
-        </form>
+    <label for="zaman">Ne zamandan beri götten girmek istiyorsunuz:</label>
+    <input type="text" id="zaman" name="zaman" required>
 
-        <script src="index.js"></script>
-    </body>
-    <hr>
-    <br>
+    <label for="comment">Görmesini istediğiniz bir şey yazın:</label>
+    <textarea id="comment" name="comment" rows="3" cols="22"></textarea>
 
+    <input type="submit" value="Gönder">
+</form>
+
+<h3>Yorum Ekle</h3>
+<form id="yorumForm">
+    <label for="hocaId">Hoca ID:</label>
+    <input type="number" id="hocaId" required>
+
+    <label for="yorum">Yorum:</label>
+    <textarea id="yorum" rows="3" cols="22" required></textarea>
+
+    <input type="submit" value="Yorum Ekle">
+</form>
+
+<h3>Yorumları Göster</h3>
+<button onclick="getYorumlar()">Yorumları Göster</button>
+<div id="yorumlarListesi"></div>
+
+<script src="index.js"></script>
+</body>
+<hr>
+<br>
 </html>

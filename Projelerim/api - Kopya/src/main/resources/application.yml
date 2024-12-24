@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/website
-    username: efe
-    password: 1234
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://dpg-csmau0d6l47c73ep7h0g-a.oregon-postgres.render.com/hocasavar_api
+    username: hocasavar_api_user
+    password: z75o2MF1UDBUtqgx4KQXMmuV7pRhhaoP
+    driver-class-name: org.hibernate.dialect.PostgreSQLDialect
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: 
